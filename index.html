@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-3.6.0.min.js" defer></script>
+    <script src="wordList.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="words">
+      <word num="0">
+        <letter num="0">
+          &nbsp;
+        </letter>
+        <letter num="1">
+          &nbsp;
+        </letter>
+        <letter num="2">
+          &nbsp;
+        </letter>
+        <letter num="3">
+          &nbsp;
+        </letter>
+        <letter num="4">
+          &nbsp;
+        </letter>
+        <letter num="5">
+          &nbsp;
+        </letter>
+        <letter num="6">
+          &nbsp;
+        </letter>
+        <letter num="7">
+          &nbsp;
+        </letter>
+      </word>
+      <word num="1">
+        <letter num="0">
+          &nbsp;
+        </letter>
+        <letter num="1">
+          &nbsp;
+        </letter>
+        <letter num="2">
+          &nbsp;
+        </letter>
+        <letter num="3">
+          &nbsp;
+        </letter>
+        <letter num="4">
+          &nbsp;
+        </letter>
+        <letter num="5">
+          &nbsp;
+        </letter>
+        <letter num="6">
+          &nbsp;
+        </letter>
+        <letter num="7">
+          &nbsp;
+        </letter>
+      </word>
+      <word num="2">
+        <letter num="0">
+          &nbsp;
+        </letter>
+        <letter num="1">
+          &nbsp;
+        </letter>
+        <letter num="2">
+          &nbsp;
+        </letter>
+        <letter num="3">
+          &nbsp;
+        </letter>
+        <letter num="4">
+          &nbsp;
+        </letter>
+        <letter num="5">
+          &nbsp;
+        </letter>
+        <letter num="6">
+          &nbsp;
+        </letter>
+        <letter num="7">
+          &nbsp;
+        </letter>
+      </word>
+      <word num="3">
+        <letter num="0">
+          &nbsp;
+        </letter>
+        <letter num="1">
+          &nbsp;
+        </letter>
+        <letter num="2">
+          &nbsp;
+        </letter>
+        <letter num="3">
+          &nbsp;
+        </letter>
+        <letter num="4">
+          &nbsp;
+        </letter>
+        <letter num="5">
+          &nbsp;
+        </letter>
+        <letter num="6">
+          &nbsp;
+        </letter>
+        <letter num="7">
+          &nbsp;
+        </letter>
+      </word>
+      <word num="4">
+        <letter num="0">
+          &nbsp;
+        </letter>
+        <letter num="1">
+          &nbsp;
+        </letter>
+        <letter num="2">
+          &nbsp;
+        </letter>
+        <letter num="3">
+          &nbsp;
+        </letter>
+        <letter num="4">
+          &nbsp;
+        </letter>
+        <letter num="5">
+          &nbsp;
+        </letter>
+        <letter num="6">
+          &nbsp;
+        </letter>
+        <letter num="7">
+          &nbsp;
+        </letter>
+      </word>
+      <word num="5">
+        <letter num="0">
+          &nbsp;
+        </letter>
+        <letter num="1">
+          &nbsp;
+        </letter>
+        <letter num="2">
+          &nbsp;
+        </letter>
+        <letter num="3">
+          &nbsp;
+        </letter>
+        <letter num="4">
+          &nbsp;
+        </letter>
+        <letter num="5">
+          &nbsp;
+        </letter>
+        <letter num="6">
+          &nbsp;
+        </letter>
+        <letter num="7">
+          &nbsp;
+        </letter>
+      </word>
+      
+      
+    </div>
+    
+    <div class="toasts"> 
+    </div>
+    
+    <div class="keyboard">
+      <row>
+        <key val="Q">Q</key>
+        <key val="W">W</key>
+        <key val="E">E</key>
+        <key val="R">R</key>
+        <key val="T">T</key>
+        <key val="Y">Y</key>
+        <key val="U">U</key>
+        <key val="I">I</key>
+        <key val="O">O</key>
+        <key val="P">P</key>
+      </row>
+      <row>
+        <key val="A">A</key>
+        <key val="S">S</key>
+        <key val="D">D</key>
+        <key val="F">F</key>
+        <key val="G">G</key>
+        <key val="H">H</key>
+        <key val="J">J</key>
+        <key val="K">K</key>
+        <key val="L">L</key>
+      </row>
+      <row>
+        <key val="RETURN">⏎</key>
+        <key val="Z">Z</key>
+        <key val="X">X</key>
+        <key val="C">C</key>
+        <key val="V">V</key>
+        <key val="B">B</key>
+        <key val="N">N</key>
+        <key val="M">M</key>
+        <key val="DELETE">⌫</key>
+      </row>
+    </div>
+    
+    <div class="stats" hidden>
+      <div id="close" onclick="$('.stats').hide()">
+        X
+      </div>
+      <div class="gameStatus">
+        You Won!
+      </div>
+<!--       <div style="text-align: center"> 
+        <div class="playCount">
+          Played: <span id="played">0</span>
+        </div>
+        <div class="playCount">
+          Won: <span id="won">0</span>
+        </div>
+        <div class="playCount">
+          Lost: <span id="lost">0</span>
+        </div>
+        <div class="playCount">
+          Unfinished: <span id="unfinished">0</span>
+        </div>
+      </div>
+      <br>
+      <p style="text-align:center">
+        Guess Distribution
+      </p>
+      <div>
+        1 <div class="distro" id="1">0</div><br>
+        2 <div class="distro" id="2">0</div><br>
+        3 <div class="distro" id="3">0</div><br>
+        4 <div class="distro" id="4">0</div><br>
+        5 <div class="distro" id="5">0</div><br>
+        6 <div class="distro" id="6">0</div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div id="share" onclick="share()">
+        Share
+      </div>
+      <div id="newGame" onclick="newGame()">
+        New Game
+      </div> -->
+    </div>
+  </body>
+</html>
