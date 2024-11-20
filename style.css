@@ -1,5 +1,5 @@
 body {
-  background-color: #000000;
+  background-color: #ffffff;
   font-family: "Helvetica", sans-serif;
 }
 
@@ -20,16 +20,16 @@ word {
 
 letter {
   display: inline-block;
-  color: #ffffff;
+  color: #000000;
   font-size: 24pt;
-  border: 1px solid white;
+  border: 1px solid black;
   width: 15%;
   max-width: 40px;
 /*   height: 40px; */
   padding: 5px;
   text-align: center;
   margin: 3px;
-  background: #000000;
+  background: #ffffff;
 }
 
 /* ------------- Toasts ------------- */
@@ -44,7 +44,7 @@ letter {
 }
 
 .toast {
-  background: #ffffff;
+  background: #cdcdcd;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -143,7 +143,7 @@ key {
 /* ------------- Colors ------------- */
 
 .incorrect {
-  background: #3A3A3C;
+  background: #8C8C8C;
 }
 
 .partial {
